@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	 version="3.1">
+    
+     <servlet>
+        <servlet-name>Do_reg</servlet-name>
+        <servlet-class>Search_Scheme.DO_register</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Do_reg</servlet-name>
+        <url-pattern>/do_reg</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Du_reg</servlet-name>
+        <servlet-class>Search_Scheme.DU_register</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Du_reg</servlet-name>
+        <url-pattern>/du_reg</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Cloud</servlet-name>
+        <servlet-class>Search_Scheme.Cloud</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Cloud</servlet-name>
+        <url-pattern>/cloud</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>File_Upload</servlet-name>
+        <servlet-class>Search_Scheme.data_upload</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>File_Upload</servlet-name>
+        <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Download</servlet-name>
+        <servlet-class>Search_Scheme.Download</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Download</servlet-name>
+        <url-pattern>/download</url-pattern>
+    </servlet-mapping>
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

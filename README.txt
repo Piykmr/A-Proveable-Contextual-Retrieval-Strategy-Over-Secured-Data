@@ -1,0 +1,3 @@
+# A-Proveable-Contextual-Retrieval-Strategy-Over-Secured-Data
+
+We offer a safe transformation to convert word transportation (WT) issues into random linear programming (LP) problems in order to acquire the encrypted minimum word transportation cost (MWTC) for semantic optimum matching on ciphertext. The MWTC is calculated as the similarity between queries and documents.  We investigate the LP duality theorem in order to create a verification method that uses the intermediate data generated during the matching process to confirm the accuracy of the search results.

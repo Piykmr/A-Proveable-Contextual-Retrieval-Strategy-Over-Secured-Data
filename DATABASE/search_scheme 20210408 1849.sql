@@ -1,0 +1,219 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.0.22-community-nt
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema search_scheme
+--
+
+CREATE DATABASE IF NOT EXISTS search_scheme;
+USE search_scheme;
+
+--
+-- Definition of table `do_files`
+--
+
+DROP TABLE IF EXISTS `do_files`;
+CREATE TABLE `do_files` (
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `doid` varchar(45) NOT NULL,
+  `doname` varchar(45) NOT NULL,
+  `enc_data` longblob NOT NULL,
+  `dkey` longtext NOT NULL,
+  `time` varchar(45) NOT NULL,
+  `filekeyword` varchar(450) NOT NULL,
+  `filename` longtext NOT NULL,
+  `data` longblob NOT NULL,
+  `enc_time` varchar(85) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `do_files`
+--
+
+/*!40000 ALTER TABLE `do_files` DISABLE KEYS */;
+INSERT INTO `do_files` (`id`,`doid`,`doname`,`enc_data`,`dkey`,`time`,`filekeyword`,`filename`,`data`,`enc_time`) VALUES 
+ (1,'1','abdul',0x3144767A7A564D367254416C765A5630596A7A7A6439686E4E5435484C6157644C54695332726530416D5A416137644B63306F746E3872796A7A475466782F3744464C72787A634C634578740D0A32667555756C4D2F576F74376B50486B7A71465050426E4F326653376E2F53413945364A51364F464278384D36377A745570526A594E65733231304E43543565433175615972337570784A690D0A422F345773664744484275664E62387A73796A6F2F644F466254356346704F344977635A4C436A792F79456F70766946675935734F65654A6B627A3954785A493852555866445474312B75330D0A584D46796A7838327A7349594866572B2B4B4F447730697A55775044662B7A7556395642504F345478426A2B4E6D4A7946696D392F7271664179667A4364546F6476634432654F71714B5A710D0A4667764B774931774954613337663063314A3933486A344C2B796E7259363052774A2F7668413D3D,'NJMhsiNYpiyN91F+AFqulg==','2021/04/07 17:14:02','Technology','mobile.txt',0x47616C617879204D33317320283647422052414D290A0A534D5F4D333137465A42440A0A576973686C6973740A0A4E6F20436F737420454D49207374617274732066726F6D2052732E20313934342E3333206D6F6E74682E0A5374616E6461726420454D49207374617274732066726F6D2052732E203834382E3433206D6F6E74682E0A36344D5020517561642043616D65726120776974682053696E676C652054616B650A537570657220414D4F4C454420496E66696E6974795F4F20446973706C61790A36303030206D416820426174746572792C2032355720696E2D626F78204661737420436861726765720A,'2811.0'),
+ (2,'1','abdul',0x5030705A676E6759584C7733544B46455566752B7578374A7350473672656856445371755351382F4F64766A4E476E6E4F3043544635384D466B4755775458454B4B65526B4D4158757548590D0A2F756D4F71586B3735523370345A4E6E75344D432B36566B5835465365382B6B6844474C4B593648764A484844705872575777522B5A7A45564C74476646504273524843454D3156724874470D0A576F392F7030414C6B324972625A4B564845516B6454657776774C3766483063715643665844707179486263582B6D6C676E49734D64763253697255705A57416F5767597A666A52325562320D0A642B345930474F5A717274713643462B626F74394555787371305A6B6F55387242304F7757726C44567166774257596251513D3D,'JGmYXc2P7K7bAPVhIJdq9A==','2021/04/08 13:52:15','Technology','laptop.txt',0x54686520323032302044656C6C205850532031352069732061206E6561722D696465616C2031352E362D696E6368206465736B746F702D7265706C6163656D656E74206C6170746F702E0A49747320736C65656B2064657369676E2C206661737420706572666F726D616E63652C20616E6420726F62757374206665617475726520736574206D616B65206974206F757220746F700A7069636B20616D6F6E67207072656D69756D2057696E646F7773206F7074696F6E73206174206974732073697A652E0A,'2414.0');
+/*!40000 ALTER TABLE `do_files` ENABLE KEYS */;
+
+
+--
+-- Definition of table `do_reg`
+--
+
+DROP TABLE IF EXISTS `do_reg`;
+CREATE TABLE `do_reg` (
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `name` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `phone` varchar(45) NOT NULL,
+  `address` varchar(300) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `do_reg`
+--
+
+/*!40000 ALTER TABLE `do_reg` DISABLE KEYS */;
+INSERT INTO `do_reg` (`id`,`name`,`email`,`phone`,`address`,`password`) VALUES 
+ (1,'abdul','abdulhathi.jpinfotech@gmail.com','6383527549','Pondy','abd');
+/*!40000 ALTER TABLE `do_reg` ENABLE KEYS */;
+
+
+--
+-- Definition of table `download`
+--
+
+DROP TABLE IF EXISTS `download`;
+CREATE TABLE `download` (
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `uid` varchar(45) NOT NULL,
+  `uname` varchar(45) NOT NULL,
+  `filename` varchar(45) NOT NULL,
+  `time` datetime NOT NULL,
+  `fileid` varchar(45) NOT NULL,
+  `doname` varchar(45) NOT NULL,
+  `doid` varchar(45) NOT NULL,
+  `decrypt_time` varchar(45) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `download`
+--
+
+/*!40000 ALTER TABLE `download` DISABLE KEYS */;
+INSERT INTO `download` (`id`,`uid`,`uname`,`filename`,`time`,`fileid`,`doname`,`doid`,`decrypt_time`) VALUES 
+ (1,'1','abdul','mobile.txt','2021-04-08 11:47:46','1','abdul','1','584.0');
+/*!40000 ALTER TABLE `download` ENABLE KEYS */;
+
+
+--
+-- Definition of table `du_reg`
+--
+
+DROP TABLE IF EXISTS `du_reg`;
+CREATE TABLE `du_reg` (
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `name` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `phone` varchar(45) NOT NULL,
+  `address` varchar(300) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `du_reg`
+--
+
+/*!40000 ALTER TABLE `du_reg` DISABLE KEYS */;
+INSERT INTO `du_reg` (`id`,`name`,`email`,`phone`,`address`,`password`) VALUES 
+ (1,'abdul','abdulhathi.jpinfotech@gmail.com','6383527549','Pondy','abd');
+/*!40000 ALTER TABLE `du_reg` ENABLE KEYS */;
+
+
+--
+-- Definition of table `request`
+--
+
+DROP TABLE IF EXISTS `request`;
+CREATE TABLE `request` (
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `filename` varchar(45) NOT NULL,
+  `time` varchar(45) NOT NULL,
+  `uid` varchar(45) NOT NULL,
+  `uname` varchar(45) NOT NULL,
+  `status` varchar(45) NOT NULL,
+  `fid` varchar(45) NOT NULL,
+  `doid` varchar(45) NOT NULL,
+  `umail` varchar(45) NOT NULL,
+  `dkey` varchar(45) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `request`
+--
+
+/*!40000 ALTER TABLE `request` DISABLE KEYS */;
+INSERT INTO `request` (`id`,`filename`,`time`,`uid`,`uname`,`status`,`fid`,`doid`,`umail`,`dkey`) VALUES 
+ (1,'mobile.txt','2021/04/08 10:37:35','1','abdul','Approved','1','1','abdulhathi.jpinfotech@gmail.com','NJMhsiNYpiyN91F+AFqulg==');
+/*!40000 ALTER TABLE `request` ENABLE KEYS */;
+
+
+--
+-- Definition of table `searchkey`
+--
+
+DROP TABLE IF EXISTS `searchkey`;
+CREATE TABLE `searchkey` (
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `uid` varchar(45) NOT NULL,
+  `uname` varchar(45) NOT NULL,
+  `time` varchar(45) NOT NULL,
+  `status` varchar(45) NOT NULL,
+  `approve_time` varchar(45) NOT NULL,
+  `expire_time` varchar(45) NOT NULL,
+  `search_token` varchar(45) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `searchkey`
+--
+
+/*!40000 ALTER TABLE `searchkey` DISABLE KEYS */;
+INSERT INTO `searchkey` (`id`,`uid`,`uname`,`time`,`status`,`approve_time`,`expire_time`,`search_token`) VALUES 
+ (1,'1','abdul','2021/04/07 18:11:34','Approved','2021-04-08 17:11:25','2021-04-08 17:16:25','F60935');
+/*!40000 ALTER TABLE `searchkey` ENABLE KEYS */;
+
+
+--
+-- Definition of table `swords`
+--
+
+DROP TABLE IF EXISTS `swords`;
+CREATE TABLE `swords` (
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `topic` varchar(45) NOT NULL,
+  `words` varchar(445) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `swords`
+--
+
+/*!40000 ALTER TABLE `swords` DISABLE KEYS */;
+INSERT INTO `swords` (`id`,`topic`,`words`) VALUES 
+ (1,'College','Student Teacher Professor'),
+ (2,'Technology','Mobile Laptop Data');
+/*!40000 ALTER TABLE `swords` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
